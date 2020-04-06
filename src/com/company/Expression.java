@@ -77,7 +77,47 @@ public class Expression {
         return postFixString;
     }
 
+/*
+    public ArrayList<Character> infixToPostfix()
+    {
+        Stack<Character> stack= new Stack<>();
+        ArrayList<Character> postFixString= new ArrayList<>();
 
+
+        for(int i=0;i<infix.length();i++) {
+            char c=infix.charAt(i);
+
+            if (Character.isLetter(c)) {
+                postFixString.add(c);
+            }
+            else if (c == '(') {
+                stack.push(c);
+            }
+            else if (c == ')') {
+
+                while (stack.peek() != '(') {
+                    postFixString.add(stack.pop());
+                }
+                stack.pop();
+            }
+            else {
+                while (!stack.isEmpty() && stack.peek() != ')'&& OperatorOrder(c) <= OperatorOrder(stack.peek()))
+                {
+                    postFixString.add(stack.pop());
+                }
+                stack.push(c);
+            }
+        }
+
+
+        while (!stack.isEmpty())
+        {
+            postFixString.add(stack.pop());
+        }
+
+        return postFixString;
+    }
+  */
 
     public int evaluate() {
         Stack<Integer> stack = new Stack<>();
